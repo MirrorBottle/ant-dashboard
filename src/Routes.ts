@@ -1,3 +1,10 @@
+/*
+    Routes belongs in this file. use 'isSidemenu' if you want the route to show in sidebar.
+    Use @ant-design/icons for the icon in sidebar.
+    You can change the code in Sidebar.tsx
+*/
+
+
 import {
     AppstoreOutlined,
     SlidersOutlined,
@@ -68,6 +75,46 @@ const Routes: RouteType[] = [
             {
                 path: "/pages/blank",
                 name: "Blank Page",
+                icon: MinusOutlined,
+                component: BlankPage,
+                layout: "/admin",
+                isSidemenu: true,
+            },
+            {
+                path: "/login",
+                name: "Login",
+                icon: MinusOutlined,
+                component: BlankPage,
+                layout: "/auth",
+                isSidemenu: true,
+            },
+            {
+                path: "/register",
+                name: "Register",
+                icon: MinusOutlined,
+                component: BlankPage,
+                layout: "/auth",
+                isSidemenu: true,
+            },
+            {
+                path: "/pages/404",
+                name: "404",
+                icon: MinusOutlined,
+                component: BlankPage,
+                layout: "/admin",
+                isSidemenu: true,
+            },
+            {
+                path: "/pages/500",
+                name: "500",
+                icon: MinusOutlined,
+                component: BlankPage,
+                layout: "/admin",
+                isSidemenu: true,
+            },
+            {
+                path: "/pages/403",
+                name: "403",
                 icon: MinusOutlined,
                 component: BlankPage,
                 layout: "/admin",
