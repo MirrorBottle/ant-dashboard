@@ -1,22 +1,18 @@
-import React, {useState} from 'react'
+import React from 'react'
 import { Bar } from 'react-chartjs-2'
 import moment from "moment";
 import { 
     Card, 
     Col, 
     Row ,
-    Layout,
     Statistic,
     Typography,
-    Result, 
-    Button,
     Tabs,
     Comment,
     Avatar,
     List
 } from 'antd';
 import {
-    LikeOutlined,
     FolderTwoTone,
     SmileTwoTone,
     CalendarTwoTone,
@@ -44,7 +40,7 @@ const ListItem = (props: { messages: TabData[]}) => (
         renderItem={message => (
             <li>
                 <Comment
-                    author={<a>{message.username}</a>}
+                    author={<span>{message.username}</span>}
                     avatar={<Avatar src={message.avatar} alt={message.username} />}
                     content={<p>{message.context}</p>}
                     datetime={<span>{moment(message.datetime, "YYYY-MM-DD HH:mm:ss").fromNow()}</span>}
@@ -54,7 +50,7 @@ const ListItem = (props: { messages: TabData[]}) => (
     />
 )
 export default function Dashboard() {
-    const [messages, setMessages] = useState<TabData[]>([
+    const messages:TabData[] = [
         {
             id: 1,
             userId: 2,
@@ -95,7 +91,7 @@ export default function Dashboard() {
             datetime: moment().subtract("hour", 4).format("YYYY-MM-DD HH:mm:ss"),
             avatar: "https://i.pravatar.cc/150?img=40"
         },
-    ]);
+    ];
     const chartData = {
         labels: ['Mon', 'Tues', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun'],
         datasets: [

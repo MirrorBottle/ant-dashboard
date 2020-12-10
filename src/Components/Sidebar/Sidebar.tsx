@@ -16,7 +16,6 @@ export default function Sidebar(props: SidebarPropsType) {
     const createLinks = () => {
         return props.routes.map((prop, key) => {
             if (prop.subMenu) {
-                console.log(prop)
                 return (
                     <SubMenu key={key} icon={<prop.icon/>} title={prop.name}>
                         {prop.subMenu.map((route, routeKey) => (
@@ -49,8 +48,9 @@ export default function Sidebar(props: SidebarPropsType) {
                 position: 'fixed',
                 left: 0,
             }}
+            breakpoint="sm"
+            collapsedWidth="0"
             collapsible
-            breakpoint="lg"
             collapsed={props.collapsed}
             trigger={null}
             theme="light"
