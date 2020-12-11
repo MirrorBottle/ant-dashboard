@@ -44,7 +44,7 @@ export default class AdminLayout extends Component<RouteComponentProps> {
                     })
                 );
             }
-            return null;
+            return <Redirect to="/admin/error/404" key={key} />;
         });
     };
 

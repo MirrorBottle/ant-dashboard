@@ -17,7 +17,7 @@ import {
 // type for route
 import {RouteType} from "./Models"
 // About
-import About from "./Views/Dashboard";
+import About from "./Views/About";
 // Dashboard
 import Dashboard from "./Views/Dashboard";
 // CRUD
