@@ -1,6 +1,6 @@
 {
   "name": "cra-template-ant-dashboard",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "license": "MIT",
   "author": "Bayu Setiawan <setiawanbayu66152@gmail.com>",
   "engines": {
@@ -17,7 +17,9 @@
     "antd",
     "react-router",
     "react-router-dom",
-    "typescript"
+    "typescript",
+    "admin-dashboard",
+    "dashboard"
   ],
   "files": [
     "template",

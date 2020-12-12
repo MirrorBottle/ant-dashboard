@@ -1,4 +1,6 @@
-
+/*
+    You can create type or interface for your component inside this file
+*/
 
 export interface RouteType {
     path: string;

@@ -1,10 +1,9 @@
 import React from 'react'
 import { Form, Input, Button, Checkbox, Card, Image } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
+import {Link} from "react-router-dom"
 import Logo from "../../assets/antd.png"
-
-
-export default function Register() {
+export default function Login() {
     return (
         <Card id="auth-card">
             <Image
@@ -39,9 +38,9 @@ export default function Register() {
                     <Form.Item name="remember" valuePropName="checked" noStyle>
                         <Checkbox>Remember me</Checkbox>
                     </Form.Item>
-                    <a className="login-form-forgot" href="">
+                    <Link className="login-form-forgot" to="/auth/login">
                         Forgot password
-                    </a>
+                    </Link>
                 </Form.Item>
                 <Form.Item>
                     <Button type="primary" htmlType="submit" className="login-form-button">

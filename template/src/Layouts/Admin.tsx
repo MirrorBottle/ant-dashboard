@@ -32,12 +32,12 @@ export default class AdminLayout extends Component<RouteComponentProps> {
             } else if (prop.subMenu) {
                 return (
                     prop.subMenu !== undefined &&
-                    prop.subMenu.map((prop, key) => {
+                    prop.subMenu.map((sub, key) => {
                         return (
                             <Route
                                 exact
-                                path={prop.layout + prop.path}
-                                component={prop.component}
+                                path={sub.layout + sub.path}
+                                component={sub.component}
                                 key={key}
                             />
                         );
@@ -73,18 +73,20 @@ export default class AdminLayout extends Component<RouteComponentProps> {
     render() {
         const {collapsed} = this.state;
         return (
-            <Layout>
-                <Sidebar collapsed={collapsed} routes={Routes} />
-                <Layout className="site-layout" style={{ marginLeft: collapsed ? 75 : 200 }}>
-                    <AdminHeader currentRouteText={this.getCurrentRouteText(this.props.location.pathname, Routes)} collapsed={collapsed} routes={Routes} toggleCollapsed={this.toggleCollapsed} />
-                    <Content style={{ margin: '24px 16px 0', overflow: 'initial' }}>
-                        <div style={{ padding: 24, minHeight: 360 }}>
-                            <Switch>{this.getRoutes(Routes)}</Switch>
-                        </div>
-                    </Content>
-                    <AdminFooter />
+            <React.Fragment>
+                <Layout>
+                    <Sidebar collapsed={collapsed} routes={Routes} />
+                    <Layout className="site-layout" style={{ marginLeft: collapsed ? 0 : 200 }}>
+                        <AdminHeader currentRouteText={this.getCurrentRouteText(this.props.location.pathname, Routes)} collapsed={collapsed} routes={Routes} toggleCollapsed={this.toggleCollapsed} />
+                        <Content style={{ margin: '24px 16px 0', overflow: 'initial' }}>
+                            <div style={{ padding: 24, minHeight: 360 }}>
+                                <Switch>{this.getRoutes(Routes)}</Switch>
+                            </div>
+                        </Content>
+                        <AdminFooter />
+                    </Layout>
                 </Layout>
-            </Layout>
+            </React.Fragment>
         )
     }
 }
