@@ -1,6 +1,22 @@
-# Getting Started with Create React App
+# Getting Started with Ant Dashboard
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+
+## About
+
+This admin dashboard is made with [Ant Design](https://ant.design) 
+
+## Demo
+
+You can see the live demo [here](https://ant-dashboard.netlify.app) 
+
+## How to Install
+Just run
+
+`npx create-react-app --template ant-dashboard`
+
+A piece of cake, isn't it?
 
 ## Available Scripts
 
